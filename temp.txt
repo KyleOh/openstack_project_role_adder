@@ -15,4 +15,83 @@ stack@openstack:~$ openstack user create \
 +---------------------+----------------------------------+
 
 
+stack@openstack:~$ openstack project create \
+> --domain Default \
+> --enable \
+> test19
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description |                                  |
+| domain_id   | default                          |
+| enabled     | True                             |
+| id          | 6c67f0c5e5324ce7bbe3a3f1177998e5 |
+| is_domain   | False                            |
+| name        | test19                           |
+| parent_id   | default                          |
+| tags        | []                               |
++-------------+----------------------------------+
 
+
+stack@openstack:~$ openstack quota set \
+> --ram 51200 \
+> --instances 10 \
+> --floating-ips 20 \
+> --gigabytes 30 \
+> --cores 20 \
+> test19
+stack@openstack:~$ openstack quota show test19
++----------------------+----------------------------------+
+| Field                | Value                            |
++----------------------+----------------------------------+
+| backup-gigabytes     | 1000                             |
+| backups              | 10                               |
+| cores                | 20                               |
+| fixed-ips            | -1                               |
+| floating-ips         | 20                               |
+| gigabytes            | 30                               |
+| gigabytes_ceph       | -1                               |
+| groups               | 10                               |
+| health_monitors      | None                             |
+| injected-file-size   | 10240                            |
+| injected-files       | 5                                |
+| injected-path-size   | 255                              |
+| instances            | 10                               |
+| key-pairs            | 100                              |
+| l7_policies          | None                             |
+| listeners            | None                             |
+| load_balancers       | None                             |
+| location             | None                             |
+| name                 | None                             |
+| networks             | 100                              |
+| per-volume-gigabytes | -1                               |
+| pools                | None                             |
+| ports                | 500                              |
+| project              | 6c67f0c5e5324ce7bbe3a3f1177998e5 |
+| project_name         | test19                           |
+| properties           | 128                              |
+| ram                  | 51200                            |
+| rbac_policies        | 10                               |
+| routers              | 10                               |
+| secgroup-rules       | 100                              |
+| secgroups            | 10                               |
+| server-group-members | 10                               |
+| server-groups        | 10                               |
+| snapshots            | 10                               |
+| snapshots_ceph       | -1                               |
+| subnet_pools         | -1                               |
+| subnets              | 100                              |
+| volumes              | 10                               |
+| volumes_ceph         | -1                               |
++----------------------+----------------------------------+
+
+stack@openstack:~$ openstack role add \
+> --project test19 \
+> --user test19 \
+> Member
+
+
+stack@openstack:~$ openstack role add \
+> --project test19 \
+> --user admin \
+> Member
