@@ -29,3 +29,38 @@ usage: openstack project create [-h] [-f {json,shell,table,value,yaml}]
                                 [--property <key=value>] [--or-show]
                                 <project-name>
 ```
+
+### openstack quota set
+
+```bash
+stack@openstack:~$ openstack quota set
+usage: openstack quota set [-h] [--class] [--properties <properties>]
+                           [--server-groups <server-groups>] [--ram <ram>]
+                           [--key-pairs <key-pairs>] [--instances <instances>]
+                           [--fixed-ips <fixed-ips>]
+                           [--injected-file-size <injected-file-size>]
+                           [--server-group-members <server-group-members>]
+                           [--injected-files <injected-files>]
+                           [--cores <cores>]
+                           [--injected-path-size <injected-path-size>]
+                           [--per-volume-gigabytes <per-volume-gigabytes>]
+                           [--gigabytes <gigabytes>]
+                           [--backup-gigabytes <backup-gigabytes>]
+                           [--snapshots <snapshots>] [--volumes <volumes>]
+                           [--backups <backups>] [--l7policies <l7policies>]
+                           [--subnetpools <subnetpools>] [--vips <vips>]
+                           [--ports <ports>] [--subnets <subnets>]
+                           [--networks <networks>]
+                           [--floating-ips <floating-ips>]
+                           [--secgroup-rules <secgroup-rules>]
+                           [--health-monitors <health-monitors>]
+                           [--secgroups <secgroups>] [--routers <routers>]
+                           [--rbac-policies <rbac-policies>]
+                           [--volume-type <volume-type>]
+                           <project/class>
+```
+
+`PROJECT_ID=$(openstack project show -f value -c id PROJECT_NAME)`
+
+
+
