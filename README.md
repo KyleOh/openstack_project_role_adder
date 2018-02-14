@@ -4,7 +4,8 @@
 
 ## Parameters
 
-useradder.sh needs only one parameters.
+useradder.sh needs only one parameter.
+
 user and project name.
 
 ### openstack user create
