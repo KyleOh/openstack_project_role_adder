@@ -1,6 +1,12 @@
 # openstack_project_role_adder
 
 
+
+## Parameters
+
+useradder.sh needs only one parameters.
+user and project name.
+
 ### openstack user create
 
 ```bash
