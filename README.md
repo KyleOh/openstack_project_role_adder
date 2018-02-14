@@ -14,7 +14,6 @@ usage: openstack user create [-h] [-f {json,shell,table,value,yaml}]
                              [--description <description>]
                              [--enable | --disable] [--or-show]
                              <name>
-openstack user create: error: too few arguments
 ```
 
 ### openstack project create
@@ -29,5 +28,4 @@ usage: openstack project create [-h] [-f {json,shell,table,value,yaml}]
                                 [--enable | --disable]
                                 [--property <key=value>] [--or-show]
                                 <project-name>
-openstack project create: error: too few arguments
 ```
