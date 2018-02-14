@@ -11,6 +11,13 @@ then
   echo "  Please login as stack. Below command will help you."
   echo "         sudo su - stack"
   echo ""
-  exit 1
+#exit 1
 fi
 
+
+# check number of parameters
+if [ $# -ne 1 ]
+then
+  echo "Usage: ./`basename $0` name"
+  exit 1
+fi
