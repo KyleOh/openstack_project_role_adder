@@ -39,7 +39,6 @@ usage: openstack project create [-h] [-f {json,shell,table,value,yaml}]
 ### openstack quota set
 
 ```bash
-stack@openstack:~$ openstack quota set
 usage: openstack quota set [-h] [--class] [--properties <properties>]
                            [--server-groups <server-groups>] [--ram <ram>]
                            [--key-pairs <key-pairs>] [--instances <instances>]
