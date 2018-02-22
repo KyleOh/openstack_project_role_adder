@@ -4,6 +4,12 @@
 
 ## Parameters
 
+```bash
+usage: ./useradder.sh <name>
+
+```
+
+
 useradder.sh needs only one parameter.
 
 user and project name.
