@@ -1,14 +1,13 @@
 # openstack_project_role_adder
 
-
-
-## Parameters
+## USAGE
 
 ```bash
 usage: ./useradder.sh <name>
 
 ```
 
+## Parameters
 
 useradder.sh needs only one parameter.
 
