@@ -3,6 +3,8 @@
 LOG_DIR=/opt/stack/
 STACK_UID=1001
 
+USER_CREATE=$(openstack user create \\)
+
 
 if [ "$UID" -ne "$STACK_UID" ]
 then
@@ -23,11 +25,18 @@ then
 fi
 
 # user create
-openstack user create \
---domain Default \
---pssword $1 \
---enable \
-$1
+USER_CREATE_OUTPUT=$(openstack user create --domain Default --password $1 --enable $1)
+if [ $? -ne 0 ]
+then
+    echo "Error: User Create failed"
+    exit 2
+fi
+
+#openstack user create \
+#--domain Default \
+#--password $1 \
+#--enable \
+#$1
 
 # project create
 openstack project create \
